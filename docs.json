@@ -82,5 +82,19 @@
 		"socials": {
 			"discord": "https://discord.forwynn.net"
 		}
-	}
+  },
+  "search": {
+    "prompt": "Search"
+  },
+  "styling": {
+    "latex": true
+  },
+  "metadata": {
+    "timestamp": true
+  },
+  "errors": {
+    "404": {
+      "redirect": true
+    }
+  }
 }
