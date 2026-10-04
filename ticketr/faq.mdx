@@ -1,0 +1,117 @@
+---
+title: "FAQ & Troubleshooting"
+icon: "circle-question"
+description: "Frequently asked questions and fixes for common issues in Ticketr."
+---
+
+Frequently asked questions and fixes for the most common issues you might run into. If your problem isn't listed here, jump to [Getting Support](#getting-support-reporting-a-bug).
+
+<AccordionGroup>
+  <Accordion title="The panel is missing / disappeared">
+    If the panel message was deleted (or was never posted), just repost it. An administrator can run:
+
+    ```bash
+    /ticket panel #channel
+    ```
+
+    If the old panel message still exists, Ticketr updates it in place. If it was deleted, a fresh panel is posted. Panels also auto-refresh whenever you change categories or panel settings, so a missing panel almost always means the message itself was removed.
+
+  </Accordion>
+
+  <Accordion title="Tickets aren't being created">
+    Work through this checklist:
+
+    - Is the ticket system enabled? Check the toggle under **System** in the dashboard (or `/settings`).
+    - Is a ticket channel set and still valid? Thread tickets are created inside this channel. If it's missing or invalid, creation fails.
+    - Do you have at least one category? A panel with no categories has nothing to open.
+    - Is a panel posted in the channel? Users open tickets from the panel.
+    - For channel-type categories, does the chosen channel category still exist? If it was deleted, new tickets can't be created in it.
+
+  </Accordion>
+
+  <Accordion title="Users can't open a category">
+    Two things can block a user:
+
+    - **Restricted roles**: if the category has restricted roles set, only members holding one of those roles can open it ("You do not have the required role to open a ticket in this category").
+    - **Ticket limit**: the category's *Max User Active Tickets*. If a user already has that many open tickets, they'll be told to wait for one to close.
+
+  </Accordion>
+
+<Accordion title="Staff aren't being added to tickets">
+	Only roles you explicitly list get added to a ticket when it opens. Check
+	the category's **Ping Roles** and **Manager Roles** (plus the *Ping Managers
+	on Open* toggle), and the server's **Ticket Admin Roles**. Roles not listed
+	there aren't added automatically.
+</Accordion>
+
+  <Accordion title="I can't close a ticket">
+    Only three kinds of people can close a ticket:
+
+    - The member who opened the ticket
+    - Members with a Manager Role for that category
+    - Members with a Ticket Admin Role (any category)
+
+    If you're none of these, the close button/command won't work. Either ask the opener, or have someone with the right role close it for you.
+
+  </Accordion>
+
+<Accordion title="The bot is missing permissions">
+	If Ticketr can't create threads or channels, or silently fails to do so,
+	it's almost always missing required permissions. Re-invite the bot with the
+	permissions listed in [Getting Started](./index), including **Manage
+	Channels**, **View Channels**, **Send Messages** and **Send Messages in
+	Threads**, **Create/Manage Threads**, and **Mention @everyone**. For
+	channel-type tickets, the bot also needs permission to create channels
+	inside the chosen category.
+</Accordion>
+
+<Accordion title="The opener's DM didn't send">
+	When a ticket closes, Ticketr DMs the opener a summary. If the opener has
+	DMs disabled, blocked the bot, or isn't in shared servers with it, the DM
+	fails silently and the ticket still closes, the transcript is still saved,
+	and the log entry is still posted. Nothing is lost, just the closure isn't
+	announced to the opener.
+</Accordion>
+
+  <Accordion title="Recovering from a deleted category">
+    If a category is deleted while tickets from it are still open, the ticket channels/threads themselves are not deleted and keep working. Two things change:
+
+    - The category's **Manager Roles** no longer apply (they were stored on the category), so those staff lose per-category manage access.
+    - The server's **Ticket Admin Roles** still work on every ticket, and the opener can still close their own ticket.
+
+    Ticketr can also recover tickets whose database record was lost, so they remain closable. If you need help cleaning up, contact support.
+
+  </Accordion>
+
+  <Accordion title="Getting support / reporting a bug">
+    Need help or found a bug? Join the [support & community server](https://discord.forwynn.net) and open a ticket there. Include the server ID, what you were doing when the problem happened, and any error text you saw. For outages, check the [status page](https://status.forwynn.net).
+  </Accordion>
+</AccordionGroup>
+
+---
+
+<CardGroup cols={3}>
+  <Card
+    title="Status"
+    href="https://status.forwynn.net"
+    icon="chart-line"
+  >
+    View the status of Ticketr.
+  </Card>
+
+<Card
+	title="Support Discord"
+	href="https://discord.forwynn.net"
+	icon="messages-question"
+>
+	Need help? Join the community / support server here!
+</Card>
+
+  <Card
+    title="Invite Ticketr"
+    href="https://discord.com/oauth2/authorize?client_id=1516583235591868516"
+    icon="ticket"
+  >
+    Want to add Ticketr now? Click here!
+  </Card>
+</CardGroup>

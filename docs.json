@@ -23,7 +23,24 @@
 				"pages": [
 					{
 						"group": "Getting Started",
-						"pages": ["ticketr/index", "ticketr/quickstart"]
+						"pages": ["ticketr/index", "ticketr/permissions"]
+					},
+					{
+						"group": "Configuration",
+						"pages": [
+							"ticketr/panels",
+							"ticketr/modalcomponents",
+							"ticketr/logging",
+							"ticketr/Transcripts"
+						]
+					},
+					{
+						"group": "Plans",
+						"pages": ["ticketr/plans"]
+					},
+					{
+						"group": "Help",
+						"pages": ["ticketr/faq"]
 					}
 				]
 			},
@@ -82,19 +99,19 @@
 		"socials": {
 			"discord": "https://discord.forwynn.net"
 		}
-  },
-  "search": {
-    "prompt": "Search"
-  },
-  "styling": {
-    "latex": true
-  },
-  "metadata": {
-    "timestamp": true
-  },
-  "errors": {
-    "404": {
-      "redirect": true
-    }
-  }
+	},
+	"search": {
+		"prompt": "Search"
+	},
+	"styling": {
+		"latex": true
+	},
+	"metadata": {
+		"timestamp": true
+	},
+	"errors": {
+		"404": {
+			"redirect": true
+		}
+	}
 }

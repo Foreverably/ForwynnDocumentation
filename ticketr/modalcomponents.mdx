@@ -1,0 +1,75 @@
+---
+title: "Modal Components"
+icon: "grid-2-plus"
+description: "Overview of custom form input and display components available in Ticketr modal forms."
+---
+
+Ticketr supports a rich set of custom modal components for ticket creation and intake forms. You can combine interactive inputs with layout elements to build tailored forms for your community.
+
+<Info>
+	**Discord Limitation Notice** Discord allows up to **5 components** per
+	modal, with a maximum limit of **4 custom interactive fields** per ticket
+	form.
+</Info>
+
+## Components
+
+### Text
+
+<ParamField body="Text Input" type="string">
+	An open-ended text input field for short single-line responses or multi-line
+	paragraphs (e.g., ticket subject, problem description). Supports setting
+	minimum/maximum character lengths and placeholder text.
+</ParamField>
+
+### Choice
+
+<ParamField body="String Select" type="string[]">
+	A static dropdown menu allowing members to select one or multiple
+	pre-defined text options from a custom list.
+</ParamField>
+
+<ParamField body="Radio Group" type="string">
+	A set of radio buttons allowing members to pick **exactly one** option from
+	a single-choice list of options.
+</ParamField>
+
+<ParamField body="Checkbox Group" type="string[]">
+	A group of checkboxes enabling members to select **multiple options**
+	simultaneously from a defined list.
+</ParamField>
+
+<ParamField body="Checkbox" type="boolean">
+	A single toggle checkbox for standalone binary choices (e.g., agreeing to
+	server rules or confirming an issue).
+</ParamField>
+
+### Select
+
+<ParamField body="User Select" type="User[]">
+	A dynamically populated Discord dropdown menu enabling users to search for
+	and select one or more server members.
+</ParamField>
+
+<ParamField body="Role Select" type="Role[]">
+	A dynamic Discord dropdown menu enabling users to search for and select one
+	or more server roles.
+</ParamField>
+
+<ParamField body="Mentionable Select" type="User[] | Role[]">
+	A combined Discord dropdown menu allowing users to search and select either
+	server members or roles.
+</ParamField>
+
+<ParamField body="Channel Select" type="Channel[]">
+	A dynamic Discord dropdown menu allowing users to select specific text,
+	voice, or category channels. Can be filtered by channel types.
+</ParamField>
+
+### Layout
+
+<ParamField body="Text Display" type="string">
+	A read-only content block used to display guidance, instructions, or
+	disclaimers directly inside the modal. Full Markdown formatting is supported
+	(bold text, links, bullet points, code blocks).
+</ParamField>

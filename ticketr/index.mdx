@@ -1,0 +1,81 @@
+---
+title: "Getting Started"
+icon: "sparkles"
+description: "Welcome to Ticketr! Learn how to invite, configure, and deploy Ticketr in your server."
+---
+
+Hey! Welcome to Ticketr's documentation. This page and adjacent guides will help you get your ticket system up and running quickly.
+
+## Inviting Ticketr
+
+In order to invite Ticketr, you must have the **Manage Server** permission in your Discord server. When authorizing, ensure you grant the required permissions:
+
+- **Manage Channels**
+- **View Channels** _(doesn't grant access to private channels)_
+- **Send Messages** and **Send Messages in Threads**
+- **Create Public and Private Threads**
+- **Manage Threads**
+- **Mention `@everyone`, `@here`, and All Roles**
+
+<Tip>
+  Some of these permissions are powerful. Here is why Ticketr requires them:
+
+| Permission                                      | Why?                                                                                    |
+| :---------------------------------------------- | :-------------------------------------------------------------------------------------- |
+| **Manage Channels**                             | Required if you use channel-based tickets instead of thread-based tickets.              |
+| **Create & Manage Threads**                     | Required for creating, closing, and archiving ticket threads inside your panel channel. |
+| **Mention `@everyone`, `@here`, and All Roles** | Required to ping and grant access to assigned support roles when a ticket opens.        |
+
+</Tip>
+
+## Information
+
+### Official Links
+
+<CardGroup cols={3}>
+  <Card
+    title="Status"
+    href="https://status.forwynn.net"
+    icon="chart-line"
+  >
+    View real-time status and operational metrics for Ticketr.
+  </Card>
+
+<Card
+	title="Support Discord"
+	href="https://discord.forwynn.net"
+	icon="messages-question"
+>
+	Need help? Join our community and support server!
+</Card>
+
+  <Card
+    title="Invite Ticketr"
+    href="https://discord.com/oauth2/authorize?client_id=1516583235591868516"
+    icon="ticket"
+  >
+    Want to add Ticketr now? Click here to authorize!
+  </Card>
+</CardGroup>
+
+### Enabling or Disabling Tickets
+
+Enabling and disabling tickets is simple:
+
+1. Open the [Ticketr Dashboard](https://ticketr.forwynn.net/dashboard).
+2. Select the server you manage.
+3. Navigate to **System** and toggle **Ticket System Enabled**.
+
+_(Alternatively, you can run `/settings` in Discord and toggle the status directly)._
+
+### Recommended Setup Order
+
+To get Ticketr production-ready, we recommend configuring your server in this order:
+
+| Step                       | Why?                                                                                              |
+| :------------------------- | :------------------------------------------------------------------------------------------------ |
+| **1. Permissions & Roles** | Ensure only authorized staff members can view and manage support tickets.                         |
+| **2. Ticket Categories**   | Create categories for specific user needs (e.g., `Support`, `Billing`, `Report`).                 |
+| **3. Log Channel**         | Set a designated staff channel to track opened tickets, closures, and transcripts.                |
+| **4. Branding & Accents**  | Customize panel visuals and embed colors <Badge color="violet" icon="sparkles">Plus / Pro</Badge> |
+| **5. Deploy Panel**        | Post your completed panel using `/ticket panel #channel` so members can open tickets.             |

@@ -1,0 +1,33 @@
+---
+title: Ticket Logging
+icon: "Clipboard"
+---
+
+import { Activity, Box, Spade, Ticket, MessagesSquare } from "lucide-react";
+
+Ticketr can keep a log of everything that happens with your tickets, so you always know what went on, when, and who was responsible.
+
+## The ticket log channel
+
+The ticket log channel is where Ticketr posts a message every time a ticket is **opened**, **closed**, or gets an **update**. You configure it in the dashboard under **System -> Ticket Log Channel** (or via `/settings`).
+
+<Info>
+	#### No log channel? If no ticket log channel is set, Ticketr simply skips
+	logging so tickets still work normally, you just won't get the log messages.
+</Info>
+
+## What each log entry contains
+
+Every log message is colour-coded by type and includes the ticket it belongs to:
+
+| Type   | Accent colour | Contents                                                                 |
+| :----- | :------------ | :----------------------------------------------------------------------- |
+| Opened | Indigo        | Category name, who opened the ticket, and the description they provided. |
+| Closed | Green         | Close reason (label and detail, if any) and who closed the ticket.       |
+| Update | Indigo        | The update message itself and who posted it.                             |
+
+All entries end with a link to the ticket channel, so you can jump straight to the conversation. Notifications are suppressed on log messages so your staff aren't pinged by the log channel.
+
+## What isn't logged to Discord
+
+Configuration changes, creating or deleting categories, editing panels, toggling settings, and adding/removing users from tickets are **not** posted to your log channel.

@@ -1,0 +1,68 @@
+---
+title: Plans & Premium
+icon: "Gem"
+---
+
+import { Activity, Box, Spade, Ticket, MessagesSquare } from "lucide-react";
+
+Ticketr is free to use, with optional paid tiers for servers that want more headroom. Upgrades are bought per guild and unlock higher limits plus a few extra customisation options.
+
+## The free tier
+
+The **Free** tier includes everything Ticketr does such as unlimited tickets, unlimited users, custom fields, close reasons, the web dashboard, and more with these limits:
+
+- **7** ticket categories
+- **2** panels
+- **60-day** transcript retention
+
+## Plan comparison
+
+| Feature                        | Free    | Plus               | Professional       |
+| :----------------------------- | :------ | :----------------- | :----------------- |
+| Price                          | $0      | $2.99 / mo / guild | $4.99 / mo / guild |
+| Ticket categories              | 7       | 10                 | 15                 |
+| Panels                         | 2       | 5                  | 7                  |
+| Transcript retention           | 60 days | 180 days           | 1 year (365 days)  |
+| Modify panel accent colour     |         | Yes                | Yes                |
+| Modify ticket welcome colour   |         |                    | Yes                |
+| Priority early-access features |         |                    | Yes                |
+| Special role in support server |         | Yes                | Yes                |
+
+## How limits are enforced
+
+Limits are enforced when you create a new category or panel:
+
+- If you reach your category limit, Ticketr refuses to create another category until you remove one or upgrade.
+- If you reach your panel limit, the dashboard won't let you deploy another panel.
+
+If your subscription ends or you cancel, your guild returns to **Free** limits. Existing categories and panels remain, but you won't be able to add new ones past the free caps.
+
+## How to upgrade
+
+Upgrades are purchased through the **Discord App Store** on Ticketr's bot page. You can find the store pages on the [pricing page of the dashboard](https://ticketr.forwynn.net/pricing) or directly through the bot's Discord profile.
+
+Once the subscription is active, Ticketr detects the entitlement automatically (usually within a minute) and your new limits and perks apply immediately.
+
+<Cards>
+	<Card
+		title="Status"
+		href="https://status.forwynn.net"
+		description="View the status of Ticketr."
+		icon={<Activity />}
+	/>
+
+    <Card
+    	title="Support & Community Discord Server"
+    	href="https://discord.forwynn.net"
+    	description="Need help? Join the community / support server here!"
+    	icon={<MessagesSquare />}
+    />
+
+    <Card
+    	title="Invite Ticketr"
+    	href="https://discord.com/oauth2/authorize?client_id=1516583235591868516"
+    	description="Want to add Ticketr now? Click here!"
+    	icon={<Ticket />}
+    />
+
+</Cards>

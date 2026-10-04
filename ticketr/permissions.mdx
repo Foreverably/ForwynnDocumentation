@@ -1,0 +1,36 @@
+---
+title: Permissions
+icon: "Lock"
+---
+
+import { Activity, Box, Spade, Ticket, MessagesSquare } from "lucide-react";
+
+The permissions system in Ticketr is fairly straight forward. However they may be confusing at first glance so this page will help clarify this.
+
+## Normal Roles
+
+For global permissions for each command that isn't directly tied to interactions like closing a ticket panel Ticketr offers the following:
+
+| Permission      |                                                                                      What does it do?                                                                                      |
+| :-------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| Admin Roles     | This setting locks commands that are check for either Administrator permissions or a role from this array of roles. These people have access to the dashboard and can post a ticket panel. |
+| Staff Roles     |                                                       Similarly to Admin Roles, this command will also lock commands to staff only.                                                        |
+| Blacklist Roles |                                                              Blocks members with these roles from interacting with this bot.                                                               |
+
+## Ticket Specific Roles
+
+Ticketr allows for the ability to lock specific ticket categories to certain roles instead of `Normal Roles`. For example, Ticket categorie "Server Inquiries" allows the Server Director, Administrator and Staff roles to manage this specific category.
+
+| Role Setting     |                                                                                          What does it do?                                                                                           |
+| :--------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| Ping Roles       |                                                                 Determines what role gets pinged in this specific ticket category.                                                                  |
+| Manager Roles    | These roles are allowed to close/manage tickets in this specific ticket category. They also have access to some commands such as `/ticket add-user`, `/ticket update`, and `/ticket close-request`. |
+| Restricted Roles |                                                               Only members with one of these roles may open tickets in that category.                                                               |
+
+<Info title="" type="warn">
+	##### Information about Ticket Admin Roles. <br></br>
+	Unlike category-specific Manager Roles, the Global Ticket Admin grants
+	unrestricted "super admin" privileges across all categories ignoring
+	standard manager restrictions. Only assign this role to trusted
+	administrators.
+</Info>

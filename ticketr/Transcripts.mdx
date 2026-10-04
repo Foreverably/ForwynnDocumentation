@@ -1,0 +1,85 @@
+---
+title: "Transcripts"
+icon: "scroll"
+description: "Learn how ticket transcripts are created, managed, and viewed in Ticketr."
+---
+
+Transcripts are complete, read-only records of everything that happened inside a ticket like every message, attachment, embed, and reaction. They are perfect for keeping a trail of reviewing past tickets.
+
+## When transcripts are saved
+
+Transcripts are saved **automatically whenever a ticket is closed**. As soon as a ticket is closed, Ticketr captures the full conversation history and stores it in the transcript database. You don't have to do anything so if the ticket channel still exists, the transcript is created for you.
+
+<Info>
+	**Manual transcripts** You can also save a transcript of any text channel or
+	thread at any time using `/transcripts create`. This works for ticket
+	channels.
+</Info>
+
+## `/transcripts create [channel]`
+
+Creates a transcript of a channel manually. This command is restricted to members with the **Admin** or **Staff** role configured in `/settings`.
+
+| Option    | Description                                                                |
+| :-------- | :------------------------------------------------------------------------- |
+| `channel` | The text channel or thread to transcript. Defaults to the current channel. |
+
+If you run it inside a ticket channel you don't need to pass anything. When the transcript is saved, Ticketr replies with a **View Transcript** button that links straight to the web viewer.
+
+<Warning>
+	**No messages found** If the channel has no messages, or the transcript
+	could not be saved, Ticketr will tell you and won't create an empty
+	transcript.
+</Warning>
+
+## `/transcripts list [limit]`
+
+Lists the most recent transcripts saved in your server.
+
+| Option  | Description                                              |
+| :------ | :------------------------------------------------------- |
+| `limit` | How many transcripts to show. Minimum `1`, maximum `25`. |
+
+Each entry shows the ticket number, who opened it, when it was created (as a relative Discord timestamp), and a **View** link to open the transcript in the web viewer. If your server has no transcripts yet, you'll get a "No transcripts have been saved for this server yet" message.
+
+## The transcript viewer
+
+Every transcript gets a dedicated page on the web dashboard, reachable at:
+
+```
+/transcripts/{guild}/{id}
+```
+
+The `{guild}` and `{id}` parts are filled in for you in every transcript link Ticketr sends, so you rarely need to type this URL yourself. You must be signed in to the dashboard with Discord to open it.
+
+The viewer is a full recreation of the original conversation and shows:
+
+- Every message with its **timestamp**, author **display name**, avatar, and role **colour**
+- **Attachments** (images, files) and **stickers**
+- **Embeds**, including fields, thumbnails, and images
+- **Reactions** and **message components** (buttons, selects)
+- **Replies** to other messages, plus **edited** and **pinned** badges
+- Ticket **metadata**: ticket number, who opened it, when it was opened and closed, and the close reason
+
+Attachments are embedded directly into the transcript whenever possible so they keep working long after they'd normally expire on Discord's CDN. Anything too large or that failed to download keeps its CDN link instead, which Ticketr refreshes automatically on view.
+
+## Who can view transcripts
+
+Viewing transcripts requires a role listed in **Admin Roles** or **Staff Roles** in `/settings`. Ticketr's own global administrators can also view transcripts on any server.
+
+<Warning>
+	**Deleting transcripts** Deleting a transcript is more restricted than
+	viewing it. Only members with the `Administrator` server permission can
+	delete transcripts so a plain Admin/Staff role isn't enough. **Deletion is
+	permanent and cannot be undone.**
+</Warning>
+
+## Transcript retention
+
+Transcripts are kept for a fixed amount of time depending on your plan, after which they are automatically purged:
+
+| Plan         | Retention         |
+| :----------- | :---------------- |
+| Free         | 60 days           |
+| Plus         | 180 days          |
+| Professional | 1 year (365 days) |
