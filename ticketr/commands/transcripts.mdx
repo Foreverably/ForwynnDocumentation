@@ -1,0 +1,59 @@
+---
+title: "/transcripts"
+icon: "scroll"
+description: "Create and list ticket transcripts."
+---
+
+`/transcripts` manages transcripts which are the read-only records of everything that happened
+inside a ticket.
+
+<Info>
+	This page covers the commands. For how transcripts are captured, who can
+	view them, the web viewer, and retention per plan, see
+	[Transcripts](/ticketr/Transcripts).
+</Info>
+
+## Subcommands
+
+| Command                                      | What it does                         |
+| :------------------------------------------- | :----------------------------------- |
+| [`/transcripts create`](#transcripts-create) | Create a transcript for this channel |
+| [`/transcripts list`](#transcripts-list)     | List recent ticket transcripts       |
+
+## `/transcripts create`
+
+Creates a transcript for the channel you run it in.
+
+```bash
+/transcripts create
+```
+
+The command takes no options and always acts on the current channel.
+
+<Info>
+	**Access** Restricted to members with an **Admin Role** or **Staff Role**
+	configured in [`/settings`](/ticketr/commands/settings).
+</Info>
+
+Ticketr automatically creates a transcript whenever a ticket is closed. You only need this command to manually capture a transcript on demand. After processing, Ticketr responds with a View Transcript button for instant access in the web viewer.
+
+<Warning>
+	**No messages found** If the channel has no messages, or the transcript
+	can't be saved, Ticketr will tell you and won't create an empty transcript.
+</Warning>
+
+## `/transcripts list`
+
+Lists the most recent transcripts saved in your server.
+
+```bash
+/transcripts list [limit]
+```
+
+<ParamField body="limit" type="integer">
+	How many transcripts to show. Minimum `1`, maximum `25`. Optional.
+</ParamField>
+
+Each entry shows the ticket number, who opened it, when it was created, and a **View**
+link that opens the transcript in the web viewer. If your server has no transcripts
+yet, you'll get a "No transcripts have been saved for this server yet" message.

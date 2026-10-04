@@ -12,19 +12,15 @@ Transcripts are saved **automatically whenever a ticket is closed**. As soon as 
 
 <Info>
 	**Manual transcripts** You can also save a transcript of any text channel or
-	thread at any time using `/transcripts create`. This works for ticket
-	channels.
+	thread at any time using `/transcripts create`. Run it inside the channel you
+	want to capture.
 </Info>
 
-## `/transcripts create [channel]`
+## `/transcripts create`
 
-Creates a transcript of a channel manually. This command is restricted to members with the **Admin** or **Staff** role configured in `/settings`.
+Creates a transcript of the current channel manually. This command is restricted to members with the **Admin** or **Staff** role configured in `/settings`.
 
-| Option    | Description                                                                |
-| :-------- | :------------------------------------------------------------------------- |
-| `channel` | The text channel or thread to transcript. Defaults to the current channel. |
-
-If you run it inside a ticket channel you don't need to pass anything. When the transcript is saved, Ticketr replies with a **View Transcript** button that links straight to the web viewer.
+The command takes no options and always acts on the channel you invoke it in. When the transcript is saved, Ticketr replies with a **View Transcript** button that links straight to the web viewer.
 
 <Warning>
 	**No messages found** If the channel has no messages, or the transcript

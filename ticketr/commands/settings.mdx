@@ -1,0 +1,49 @@
+---
+title: "/settings"
+icon: "gear"
+description: "Open Ticketr's server settings dashboard inside Discord."
+---
+
+`/settings` opens Ticketr's configuration dashboard directly in Discord. It's the
+in-server equivalent of the [web dashboard](https://ticketr.forwynn.net/dashboard),
+useful when you don't want to leave Discord, or when you're already handling a ticket.
+
+## Usage
+
+```bash
+/settings
+```
+
+The command takes no options. Everything is configured through the dashboard it opens.
+
+## The System section
+
+Most of the settings you'll reach for live under **System**, including:
+
+- **Ticket System Enabled**: turns ticket creation on or off for the server
+- **Ticket Log Channel**: where tickets post on **open**, **close**, and **update**
+
+<Info>
+	Changes made here apply exactly like changes made in the web dashboard. See
+	[Logging](/ticketr/logging) for what gets posted, and where.
+</Info>
+
+## Access
+
+`/settings` is restricted to members holding an **Admin Role**, which is the role set
+that grants dashboard access.
+
+<Info>
+	**Ticket Admin** The global **Ticket Admin** grants unrestricted access
+	across all categories, ignoring standard manager restrictions. Only give it
+	to trusted administrators.
+</Info>
+
+If the command does nothing when you run it, check your roles under **Normal Roles** in
+[Permissions](/ticketr/permissions).
+
+## Related
+
+- [Permissions](/ticketr/permissions): the role system that gates this command
+- [Logging](/ticketr/logging): configuring the ticket log channel
+- [Panels and Categories](/ticketr/panels): panels and categories, editable here too

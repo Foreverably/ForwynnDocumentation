@@ -1,0 +1,110 @@
+---
+title: "/ticket"
+icon: "ticket"
+description: "Manage tickets such as closing, updates, panels, close requests, and membership."
+---
+
+`/ticket` manages the lifecycle of a ticket. Most subcommands act on the ticket channel
+you're currently in.
+
+## Subcommands
+
+| Command                                          | What it does                               |
+| :----------------------------------------------- | :----------------------------------------- |
+| [`/ticket close`](#ticket-close)                 | Close the current ticket with a reason     |
+| [`/ticket update`](#ticket-update)               | Post an update to the current ticket       |
+| [`/ticket panel`](#ticket-panel)                 | Post or update a ticket panel              |
+| [`/ticket close-request`](#ticket-close-request) | Ask the opener if the ticket can be closed |
+| [`/ticket add-user`](#ticket-add-user)           | Add a user to the current ticket           |
+| [`/ticket remove-user`](#ticket-remove-user)     | Remove a user from the current ticket      |
+
+<Info>
+	**Manager Roles** <br></br> A category's **Manager Roles** can use commands
+	such as [`/ticket update`](#ticket-update), [`/ticket
+	close-request`](#ticket-close-request), and [`/ticket
+	add-user`](#ticket-add-user). See [Permissions](/ticketr/permissions) for
+	how roles are configured.
+</Info>
+
+## `/ticket close`
+
+Closes the current ticket with a reason.
+
+```bash
+/ticket close
+```
+
+The command takes no options. The reason recorded against the ticket shows up in the
+[transcript](/ticketr/Transcripts) and in the [ticket log](/ticketr/logging).
+
+## `/ticket update`
+
+Posts an update message into the current ticket.
+
+```bash
+/ticket update message: <text>
+```
+
+<ParamField body="message" type="string" required>
+	The update message to post. Maximum **1500** characters.
+</ParamField>
+
+<Info>
+	Updates are written to the [ticket log channel](/ticketr/logging) alongside
+	opens and closes, so staff who aren't in the ticket still see them.
+</Info>
+
+## `/ticket panel`
+
+Posts or updates a ticket panel.
+
+```bash
+/ticket panel panel: <name>
+```
+
+<ParamField body="panel" type="string" required>
+	The panel to post or update. This option **autocompletes**. Start typing a
+	panel name and pick it from the list.
+</ParamField>
+
+<Warning>
+	This command takes the **name** of a panel you've already built, not a
+	channel. See [Panels and Categories](/ticketr/panels) for how to create one.
+</Warning>
+
+## `/ticket close-request`
+
+Asks the ticket opener whether the ticket can be closed.
+
+```bash
+/ticket close-request [hours]
+```
+
+<ParamField body="hours" type="integer">
+	Auto-close the ticket after this many hours if no action is taken. Minimum
+	`1`, maximum `24`.
+</ParamField>
+
+## `/ticket add-user`
+
+Adds a user to the current ticket.
+
+```bash
+/ticket add-user user: <@user>
+```
+
+<ParamField body="user" type="user" required>
+	The user to add.
+</ParamField>
+
+## `/ticket remove-user`
+
+Removes a user from the current ticket.
+
+```bash
+/ticket remove-user user: <@user>
+```
+
+<ParamField body="user" type="user" required>
+	The user to remove.
+</ParamField>

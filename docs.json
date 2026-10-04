@@ -34,6 +34,14 @@
 						"pages": ["ticketr/index", "ticketr/permissions"]
 					},
 					{
+						"group": "Commands",
+						"pages": [
+							"ticketr/commands/settings",
+							"ticketr/commands/ticket",
+							"ticketr/commands/transcripts"
+						]
+					},
+					{
 						"group": "Configuration",
 						"pages": [
 							"ticketr/panels",
