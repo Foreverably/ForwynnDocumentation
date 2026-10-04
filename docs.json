@@ -14,7 +14,10 @@
 		},
 		"decoration": "windows"
 	},
-	"favicon": "/favicon.svg",
+	"favicon": {
+    "light": "/images/darkforwynn.png",
+    "dark": "/images/forwynn.png"
+  },
 	"navigation": {
 		"tabs": [
 			{
