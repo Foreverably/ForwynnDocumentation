@@ -14,9 +14,14 @@
 		},
 		"decoration": "windows"
 	},
-	"favicon": "https://cdn.forwynn.net/forwynn.png",
+	"favicon": "/favicon.svg",
 	"navigation": {
 		"tabs": [
+			{
+				"tab": "Home",
+				"icon": "house",
+				"pages": ["index"]
+			},
 			{
 				"tab": "Ticketr",
 				"icon": "ticket",
@@ -47,22 +52,17 @@
 			{
 				"tab": "Castor",
 				"icon": "cards",
-				"pages": [
-					{
-						"group": "Getting Started",
-						"pages": ["kycha/index", "kycha/quickstart"]
-					}
-				]
+				"pages": ["castor/index"]
 			},
 			{
 				"tab": "Kycha",
 				"icon": "dice",
-				"pages": [
-					{
-						"group": "Getting Started",
-						"pages": ["kycha/index", "kycha/quickstart"]
-					}
-				]
+				"pages": ["kycha/index"]
+			},
+			{
+				"tab": "Astraea",
+				"icon": "rocket",
+				"pages": ["astraea/index"]
 			}
 		],
 		"global": {
