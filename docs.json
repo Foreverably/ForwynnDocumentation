@@ -1,72 +1,86 @@
 {
-  "$schema": "https://mintlify.com/docs.json",
-  "theme": "mint",
-  "name": "Mintlify Starter Kit",
-  "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
-  },
-  "favicon": "/favicon.svg",
-  "navigation": {
-    "pages": [
-      {
-        "group": "Getting Started",
-        "pages": [
-          "index",
-          "quickstart"
-        ]
-      }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
-        }
-      ]
-    }
-  },
-  "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
-  },
-  "navbar": {
-    "links": [
-      {
-        "label": "Support",
-        "href": "mailto:support@mintlify.com"
-      }
-    ],
-    "primary": {
-      "type": "button",
-      "label": "Dashboard",
-      "href": "https://app.mintlify.com"
-    }
-  },
-  "contextual": {
-    "options": [
-      "copy",
-      "view",
-      "chatgpt",
-      "claude",
-      "perplexity",
-      "mcp",
-      "cursor",
-      "vscode"
-    ]
-  },
-  "footer": {
-    "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
-    }
-  }
+	"$schema": "https://mintlify.com/docs.json",
+	"theme": "palm",
+	"name": "Forwynn Documentation",
+	"colors": {
+		"primary": "#5865f2",
+		"light": "#798df9",
+		"dark": "#5865f2"
+	},
+	"background": {
+		"color": {
+			"light": "#F8FAFC",
+			"dark": "#121211"
+		},
+		"decoration": "windows"
+	},
+	"favicon": "https://cdn.forwynn.net/forwynn.png",
+	"navigation": {
+		"tabs": [
+			{
+				"tab": "Ticketr",
+				"icon": "ticket",
+				"pages": [
+					{
+						"group": "Getting Started",
+						"pages": ["ticketr/index", "ticketr/quickstart"]
+					}
+				]
+			},
+			{
+				"tab": "Castor",
+				"icon": "cards",
+				"pages": [
+					{
+						"group": "Getting Started",
+						"pages": ["kycha/index", "kycha/quickstart"]
+					}
+				]
+			},
+			{
+				"tab": "Kycha",
+				"icon": "dice",
+				"pages": [
+					{
+						"group": "Getting Started",
+						"pages": ["kycha/index", "kycha/quickstart"]
+					}
+				]
+			}
+		],
+		"global": {
+			"anchors": [
+				{
+					"anchor": "Discord Server",
+					"href": "https://discord.forwynn.net",
+					"icon": "discord"
+				},
+				{
+					"anchor": "Ticketr Website",
+					"href": "https://ticketr.forwynn.net",
+					"icon": "ticket"
+				}
+			]
+		}
+	},
+	"logo": {
+		"light": "https://cdn.forwynn.net/darkforwynn.png",
+		"dark": "https://cdn.forwynn.net/forwynn.png"
+	},
+	"navbar": {
+		"links": [
+			{
+				"label": "Support",
+				"href": "https://discord.forwynn.net"
+			}
+		]
+	},
+	"contextual": {
+		"options": ["copy", "view", "chatgpt", "claude"]
+	},
+	"footer": {
+		"socials": {
+			"discord": "https://discord.forwynn.net"
+		}
+	}
 }
