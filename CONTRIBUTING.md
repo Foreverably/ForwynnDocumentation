@@ -1,7 +1,7 @@
 # Contributing
 
 This repository holds the source for the Forwynn documentation site, a
-[Mintlify](https://mintlify.com) project covering Ticketr, Castor, Kycha, and the
+[Mintlify](https://mintlify.com) project covering Ticketr, Castor, Prism, and the
 Astraea Launcher.
 
 This file covers **process and conventions**. If you are an AI agent, also read
@@ -63,7 +63,7 @@ Additionally, please refer to the contribution policies in the [Discord](https:/
 | `index.mdx`                     | Site landing page, the `Home` tab                           |
 | `docs.json`                     | All site config and the entire navigation tree              |
 | `ticketr/`                      | Ticketr docs. `commands/` holds the slash-command reference |
-| `castor/`, `kycha/`, `astraea/` | One `index.mdx` per project                                 |
+| `castor/`, `prism/`, `astraea/` | One `index.mdx` per project                                 |
 | `images/`, `logo/`              | Site imagery and light/dark logos                           |
 | `favicon.svg`                   | Favicon                                                     |
 
