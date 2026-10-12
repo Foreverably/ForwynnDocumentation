@@ -15,15 +15,15 @@
 		"decoration": "windows"
 	},
 	"favicon": {
-    "light": "/images/darkforwynn.png",
-    "dark": "/images/forwynn.png"
-  },
+		"light": "/images/darkforwynn.png",
+		"dark": "/images/forwynn.png"
+	},
 	"navigation": {
 		"tabs": [
 			{
 				"tab": "Home",
 				"icon": "house",
-				"pages": ["index"]
+				"pages": ["index", "vulnandsec"]
 			},
 			{
 				"tab": "Ticketr",
@@ -66,9 +66,18 @@
 				"pages": ["castor/index"]
 			},
 			{
-				"tab": "Kycha",
-				"icon": "dice",
-				"pages": ["kycha/index"]
+				"tab": "Prism",
+				"icon": "gem",
+				"pages": [
+					{
+						"group": "Main",
+						"pages": ["prism/index", "prism/changelogs"]
+					},
+					{
+						"group": "Technical",
+						"pages": ["prism/technical/versionstrings"]
+					}
+				]
 			},
 			{
 				"tab": "Astraea",

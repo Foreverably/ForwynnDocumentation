@@ -1,0 +1,34 @@
+---
+title: "Version Strings"
+icon: "code-branch"
+description: "Understanding what version strings mean in changelogs."
+---
+
+Prism uses a unique way to store and display different versions to users and developers. Unlike the industry-standard of `major.minor.revision`, Prism uses `[stage].rev.[bot-revision].[feature-id].[hash-segment]` which is harder to understand but provide a more in-depth level of understanding to what was recently changed.
+
+## Stages
+
+Stages are as it sounds, the different stages that a feature or sometimes the bot is going under.
+
+- `STBL` — Stands for `Stable`. This is a fully tested build of the feature the bot has and no longer has flagship restrictions.
+- `RC-PROD` — Stands for `Release Candidate Stable`. The final staging build before moving into a fully public stable release.
+- `RC-BETA` — Stands for `Release Candidate Beta`. This is a step above the **BETA** stage where that feature is nearing **RC-REL** status.
+- `BETA` — As the name suggests, this is testing in selected guilds (servers) where users are reminded of sending feedback.
+- `ALPHA` — Similarly as above, this is early experimental builds that is usually unstable/unbalanced. This is usually locked behind the Prism's Scouts server.
+- `PR-DEV` — This stage is rarely used or published as a changelog. This stage stands for `Pre-Development` where that feature hasn't been programmed just yet.
+
+## Revisions
+
+The revisions system is for each build that has been published. This keeps track of the total updates that have been published.
+
+**Example**: rev.263 or rev.754
+
+## Feature ID
+
+Identifies what part of the bot was touched. An example being command `/battle` was touched so its `cmd-battle`.
+
+These _can_ stack but usually isn't needed. A stacked feature ID could look like `cmd-battle-ui-embed`
+
+## Hash Segment
+
+This hash segment is a compact date-time code which tells you when the build was published or compiled. So if the date was December 25th, 2026, the "hash" will be `261225`.
